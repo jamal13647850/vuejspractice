@@ -80,10 +80,37 @@
         </script>
     </div>
     <div class="cell medium-6 large-6">
-
+        <div id="app-5">
+            <p>{{ message }}</p>
+            <button class="button success" v-on:click="reverseMessage">Reverse Message</button>
+        </div>
+        <script>
+            let app5 = new Vue({
+                el : "#app-5",
+                data : {
+                    message : "This is a message"
+                },
+                methods :{
+                    reverseMessage : function (){
+                        this.message =  "Message a is this";
+                    }
+                }
+            })
+        </script>
     </div>
     <div class="cell medium-6 large-6">
-
+        <div id="app-6">
+            <span>{{message}}</span>
+            <input type="text" v-model="message">
+        </div>
+        <script>
+            let app6 = new Vue({
+                el: '#app-6',
+                data: {
+                    message: 'Hello Vue!'
+                }
+            })
+        </script>
     </div>
     <div class="cell medium-6 large-6">
 
