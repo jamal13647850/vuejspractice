@@ -204,7 +204,25 @@
         </script>
     </div>
     <div class="cell medium-6 large-6">
-
+        <div id="app-9">{{ fullName }}</div>
+        <script>
+            let app9 = new Vue({
+                el: '#app-9',
+                data: {
+                    firstName: 'Foo',
+                    lastName: 'Bar',
+                    fullName: 'Foo Bar'
+                },
+                watch: {
+                    firstName: function (val) {
+                        this.fullName = val + ' ' + this.lastName
+                    },
+                    lastName: function (val) {
+                        this.fullName = this.firstName + ' ' + val
+                    }
+                }
+            })
+        </script>
     </div>
     <div class="cell medium-6 large-6">
 
