@@ -169,7 +169,18 @@
         </script>
     </div>
     <div class="cell medium-6 large-6">
+        <!-- full syntax -->
+        <a v-bind:href="url"> ... </a>
 
+        <!-- shorthand -->
+        <a :href="url"> ... </a>
+
+
+        <!-- full syntax -->
+        <a v-on:click="doSomething"> ... </a>
+
+        <!-- shorthand -->
+        <a @click="doSomething"> ... </a>
     </div>
     <div class="cell medium-6 large-6">
 
