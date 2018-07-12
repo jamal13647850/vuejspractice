@@ -309,12 +309,19 @@
         <div id="app-12">
             <h1 v-if="ok">Yes</h1>
             <h1 v-else>No</h1>
+
+
+            <template v-if="ok">
+                <h1>Title</h1>
+                <p>Paragraph 1</p>
+                <p>Paragraph 2</p>
+            </template>
         </div>
         <script>
             let app12 = new Vue({
                 el : "#app-12",
                 data : {
-                    ok : false
+                    ok : true
                 }
             });
         </script>
