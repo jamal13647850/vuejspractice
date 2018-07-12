@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -26,7 +26,7 @@
             let app = new Vue({
                 el: '#app',
                 data: {
-                    message: 'Hello Vue!'
+                    message: 'سلام به ویو جی اس'
                 }
             })
         </script>
@@ -65,16 +65,25 @@
             <ul>
                 <li v-for="todo in todos">{{todo.text}}</li>
             </ul>
+
+            <input v-model="newTodo.text" type="text" v-on:keyup.enter="add" />
         </div>
         <script>
             let app4 = new Vue({
                 el : "#app-4",
                 data : {
+                    newTodo : {text:""},
                     todos :[
-                        {text: "todo 1"},
-                        {text: "todo 2"},
-                        {text: "todo 3"},
+                        {text: "نوشتن پروپوزال",complete:true},
+                        {text: "طراحی قالب",complete:false},
+                        {text: "طراحی جداول دیتابیس",complete:true},
                     ]
+                },
+                methods : {
+                    add : function (){
+                        this.todos.push({text: this.newTodo.text});
+
+                    }
                 }
             })
         </script>
@@ -88,11 +97,11 @@
             let app5 = new Vue({
                 el : "#app-5",
                 data : {
-                    message : "This is a message"
+                    message : "این یک پیام اسست"
                 },
                 methods :{
                     reverseMessage : function (){
-                        this.message =  "Message a is this";
+                        this.message =  "است پیام یک این";
                     }
                 }
             })
