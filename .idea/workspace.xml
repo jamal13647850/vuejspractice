@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aafd79fd-5abe-49f4-8e6c-38d580a6def0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -16,29 +18,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/app.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="478" column="21" selection-start-line="478" selection-start-column="21" selection-end-line="478" selection-end-column="21" />
+            <state relative-caret-position="261">
+              <caret line="547" column="75" selection-start-line="547" selection-start-column="75" selection-end-line="547" selection-end-column="75" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="foundation.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/foundation.css">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-88">
-              <caret line="1242" column="17" selection-start-line="1242" selection-start-column="10" selection-end-line="1242" selection-end-column="17" />
+            <state relative-caret-position="17">
+              <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -57,6 +50,9 @@
     <findStrings>
       <find>large-6</find>
       <find>success</find>
+      <find>:class</find>
+      <find>v-bind</find>
+      <find>compo</find>
     </findStrings>
     <replaceStrings>
       <replace>large-4</replace>
@@ -68,8 +64,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/css/app.css" />
+        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -80,7 +76,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="825" />
     <option name="y" value="6" />
     <option name="width" value="1089" />
@@ -92,6 +88,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -114,12 +111,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../02" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
@@ -167,25 +164,26 @@
       <updated>1531332069273</updated>
       <workItem from="1531332070602" duration="5616000" />
       <workItem from="1531419815134" duration="7420000" />
-      <workItem from="1531462899858" duration="2502000" />
+      <workItem from="1531462899858" duration="7007000" />
+      <workItem from="1531490404136" duration="3481000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15538000" />
+    <option name="totallyTimeSpent" value="23524000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="825" y="6" width="1089" height="1000" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2492864" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13804004" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32946634" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.29645094" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -204,6 +202,34 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/foundation.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21114">
+          <caret line="1242" column="17" selection-start-line="1242" selection-start-column="10" selection-end-line="1242" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9401">
+          <caret line="553" column="36" selection-start-line="553" selection-start-column="36" selection-end-line="553" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -241,15 +267,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/foundation.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-88">
+        <state relative-caret-position="21114">
           <caret line="1242" column="17" selection-start-line="1242" selection-start-column="10" selection-end-line="1242" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="478" column="21" selection-start-line="478" selection-start-column="21" selection-end-line="478" selection-end-column="21" />
+        <state relative-caret-position="261">
+          <caret line="547" column="75" selection-start-line="547" selection-start-column="75" selection-end-line="547" selection-end-column="75" />
         </state>
       </provider>
     </entry>

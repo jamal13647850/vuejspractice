@@ -7,6 +7,7 @@
     <title>VueJS training</title>
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
@@ -482,13 +483,118 @@
         </script>
     </div>
     <div class="cell medium-4 large-4">
-
+        <div id="components-demo">
+            <button-counter></button-counter>
+            <button-counter></button-counter>
+            <button-counter></button-counter>
+        </div>
+        <script>
+            Vue.component('button-counter', {
+                data: function () {
+                    return {
+                        count: 0
+                    }
+                },
+                template: '<button class="button primary" v-on:click="count++">You clicked me {{ count }} times.</button>'
+            });
+            new Vue({ el: '#components-demo' });
+        </script>
     </div>
     <div class="cell medium-4 large-4">
+        <div id="blog-post-demo">
+            <blog-post
+                    v-for="post in posts"
+                    v-bind:key="post.id"
+                    v-bind:title="post.title"
+            ></blog-post>
+        </div>
 
+        <script>
+            Vue.component('blog-post', {
+                props: ['title'],
+                template: '<h3>{{ title }}</h3>'
+            });
+            new Vue({
+                el: '#blog-post-demo',
+                data: {
+                    posts: [
+                        { id: 1, title: 'My journey with Vue' },
+                        { id: 2, title: 'Blogging with Vue' },
+                        { id: 3, title: 'Why Vue is so fun' }
+                    ]
+                }
+            });
+        </script>
     </div>
     <div class="cell medium-4 large-4">
+        <div id="todo-app">
+            <ul>
+                <li v-for="(todo,index) in UncompleteTodos" v-bind:class="{complete: todo.isComplete}" v-on:click="doComplete(todo.id)">{{todo.text}}</li>
+            </ul>
+            <input type="text" v-model="newTodo.text" v-on:keyup.enter="addNewTodo">
 
+
+            <div>
+                <h3>لیست کارهای انجام شده</h3>
+                <ul>
+                    <my-todo-item v-for="(todo,index) in completeTodos" v-bind:class="{complete: todo.isComplete}"  v-bind:todo="todo" v-bind:key="todo.id"></my-todo-item>
+                </ul>
+            </div>
+        </div>
+        <script>
+            window.Event = new Vue();
+            Vue.component('my-todo-item', {
+                props: ['todo'],
+                template: '<li v-on:click.prevent="cpdoUnComplete(todo.id)" >{{ todo.text }}</li>',
+                methods : {
+                    cpdoUnComplete(index) {
+                        console.log("Uncomplete");
+                        Event.$emit('Uncomplete' , index);
+                    }
+                }
+            });
+            let todoapp= new Vue({
+                el : "#todo-app",
+
+                data :{
+
+                    id : 3,
+                    newTodo : {id:3,text :"",isComplete:false},
+                    todos : [
+                        {id:0,text :"طراحی وبسایت",isComplete:true},
+                        {id:1,text :"مذاکره با مشتری",isComplete:false},
+                        {id:2,text :"عقد قرارداد",isComplete:true},
+                    ]
+                },
+                methods : {
+                    doComplete : function(index){
+                        this.todos[index].isComplete=true;
+                    },
+                    doUnComplete : function(index){
+                        this.todos[index].isComplete=false;
+                    },
+                    addNewTodo : function(){
+                        this.todos.push(this.newTodo);
+                        this.id++;
+                        this.newTodo={id:this.id,text :"",isComplete:false};
+                    },
+
+                },
+                computed : {
+                    completeTodos : function(){
+                        return this.todos.filter(todo => todo.isComplete)
+                    },
+                    UncompleteTodos : function(){
+                        return this.todos.filter(todo => !todo.isComplete)
+                    }
+                },
+                created() {
+                    Event.$on('Uncomplete' , (index) => {
+                        this.doUnComplete(index);
+                    });
+                }
+            });
+        </script>
     </div>
     <div class="cell medium-4 large-4">
 
