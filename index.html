@@ -18,7 +18,7 @@
 <body>
 
 <div class="grid-x">
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
         <div id="app">
             {{ message }}
         </div>
@@ -31,7 +31,7 @@
             })
         </script>
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
         <div id="app-2">
           <span v-bind:title="message">
             Hover your mouse over me for a few seconds
@@ -47,7 +47,7 @@
             })
         </script>
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
         <div id="app-3">
             <span v-if="seen">Now you see me</span>
         </div>
@@ -60,7 +60,7 @@
             })
         </script>
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
         <div id="app-4">
             <ul>
                 <li v-for="todo in todos">{{todo.text}}</li>
@@ -88,7 +88,7 @@
             })
         </script>
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
         <div id="app-5">
             <p>{{ message }}</p>
             <button class="button success" v-on:click="reverseMessage">Reverse Message</button>
@@ -107,7 +107,7 @@
             })
         </script>
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
         <div id="app-6">
             <span>{{message}}</span>
             <input type="text" v-model="message">
@@ -121,7 +121,7 @@
             })
         </script>
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
         <div id="app-7">
             <ol>
                 <!--
@@ -155,7 +155,7 @@
             })
         </script>
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
         <script>
             new Vue({
                 data: {
@@ -168,7 +168,7 @@
             })
         </script>
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
         <!-- full syntax -->
         <a v-bind:href="url"> ... </a>
 
@@ -182,7 +182,7 @@
         <!-- shorthand -->
         <a @click="doSomething"> ... </a>
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
         <div id="app-8">
             <p>Original message: "{{ message }}"</p>
             <p>Computed reversed message: "{{ reversedMessage }}"</p>
@@ -203,7 +203,7 @@
             })
         </script>
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
         <div id="app-9">{{ fullName }}</div>
         <script>
             let app9 = new Vue({
@@ -224,7 +224,7 @@
             })
         </script>
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
         <script>
 
            /* computed: {
@@ -244,7 +244,7 @@
 
         </script>
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
         <div id="app-10">
             <div class="static"
                  v-bind:class="{ active: isActive, 'text-danger': hasError }">
@@ -274,7 +274,7 @@
             });
         </script>
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
         <div id="app-11">
             <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">
                 Binding Inline Styles 1
@@ -305,7 +305,7 @@
             });
         </script>
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
         <div id="app-12">
             <h1 v-if="ok">Yes</h1>
             <h1 v-else>No</h1>
@@ -345,61 +345,88 @@
             });
         </script>
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
+        <div id="app-13">
+            <ul>
+                <li v-for="item in items">
+                    {{ item.message }}
+                </li>
+            </ul>
+            <ul>
+                <li v-for="(item, index) in items">
+                    {{ parentMessage }} - {{ index }} - {{ item.message }}
+                </li>
+            </ul>
+
+        </div>
+
+        <script>
+            let app13 = new Vue({
+                el : "#app-13",
+                data : {
+                    parentMessage : "this is parrent message",
+                    items : [
+                        {message: "message 1"},
+                        {message: "message 2"},
+                        {message: "message 3"},
+                        {message: "message 4"},
+                    ]
+                }
+            });
+        </script>
+    </div>
+    <div class="cell medium-4 large-4">
 
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
 
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
 
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
 
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
 
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
 
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
 
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
 
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
 
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
 
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
 
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
 
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
 
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
 
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
 
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
 
     </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
 
     </div>
-    <div class="cell medium-6 large-6">
-
-    </div>
-    <div class="cell medium-6 large-6">
+    <div class="cell medium-4 large-4">
 
     </div>
 
