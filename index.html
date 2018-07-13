@@ -357,6 +357,11 @@
                     {{ parentMessage }} - {{ index }} - {{ item.message }}
                 </li>
             </ul>
+            <ul>
+                <li v-for="value in object">
+                    {{ value}}
+                </li>
+            </ul>
 
         </div>
 
@@ -370,7 +375,13 @@
                         {message: "message 2"},
                         {message: "message 3"},
                         {message: "message 4"},
-                    ]
+                    ],
+                    object : {
+                        name : "jamal",
+                        familly : "ghasemi",
+                        age : 32
+                    }
+
                 }
             });
         </script>
