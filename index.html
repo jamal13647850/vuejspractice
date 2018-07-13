@@ -451,7 +451,18 @@
         </script>
     </div>
     <div class="cell medium-4 large-4">
-
+        <div id="app-14">
+            <button class="button primary" v-on:click="counter += 1">Add 1</button>
+            <p>The button above has been clicked {{ counter }} times.</p>
+        </div>
+        <script>
+            let app14 = new Vue({
+                el : "#app-14",
+                data : {
+                    counter : 0
+                }
+            })
+        </script>
     </div>
     <div class="cell medium-4 large-4">
 
