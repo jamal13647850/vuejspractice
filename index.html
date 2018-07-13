@@ -455,6 +455,8 @@
             <button class="button primary" v-on:click="counter += 1">Add 1</button>
             <p>The button above has been clicked {{ counter }} times.</p>
             <button class="button secondary" v-on:click="greet">Greet</button>
+            <button class="button success" v-on:click="say('hi')">Say hi</button>
+            <button class="button success" v-on:click="say('what')">Say what</button>
         </div>
         <script>
             let app14 = new Vue({
@@ -471,6 +473,9 @@
                         if (event) {
                             alert(event.target.tagName)
                         }
+                    },
+                    say: function (message) {
+                        alert(message)
                     }
                 }
             })
