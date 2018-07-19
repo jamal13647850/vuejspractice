@@ -630,7 +630,30 @@
         </script>
     </div>
     <div class="cell medium-4 large-4">
+        <div id="filters">
+            {{ 'jamal ghasemi' | size }}
+            {{ 'jamal ghasemi' | capitalize }}
+            {{  | capitalize }}
+        </div>
+        <script>
+            Vue.filter('capitalize',(value)=>{
+                try {
+                    return value.charAt(0).toUpperCase() + value.slice(1);
+                }
+                catch (e){
+                    console.error(e.message);
+                }
 
+            });
+            new Vue({
+               el : "#filters",
+                filters:{
+                   size(value){
+                       return value.length;
+                   }
+                }
+            });
+        </script>
     </div>
     <div class="cell medium-4 large-4">
 
