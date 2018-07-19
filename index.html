@@ -656,7 +656,25 @@
         </script>
     </div>
     <div class="cell medium-4 large-4">
+        <div id="custom-directive">
+            <h1>{{ message }}</h1>
+            <h1 v-text="message"></h1>
+            <h1 v-mytext="message"></h1>
 
+        </div>
+        <script>
+            Vue.directive('mytext',{
+                bind(el , binding , vnode) {
+                    el.innerHTML = binding.value;
+                }
+            });
+            new Vue({
+                el : "#custom-directive",
+                data : {
+                    message : "Hello Word"
+                }
+            });
+        </script>
     </div>
     <div class="cell medium-4 large-4">
 
